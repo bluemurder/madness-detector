@@ -9,6 +9,41 @@ Arduino-based madness detector. It is a useful tool that informs when a person c
 * 2x prototyping boards
 
 ## Building steps
+### Introduction
+The project is intended with two boards hosting an ATmega328P IC each, working with its internal 8 MHz RC oscillator as a clock source instead of canonical 16MHz crystal.
+Here's a reference for Arduino UNO board pins and IC pins:
+
+| Arduino pin | IC pin | Notes |
+|-------------|--------|------|
+| RESET | 1 ||
+| A0 | 23 ||
+| A1 | 24 ||
+| A2 | 25 ||
+| A3 | 26 ||
+| A4 | 27 ||
+| A5 | 28 ||
+| RXD | 2 ||
+| TXD | 3 ||
+| 2 | 4 ||
+| 3 | 5 |PWM|
+| 4 | 6 ||
+||7|VCC|
+||8|GND|
+| 5 | 11 |PWM|
+| 6 | 12 |PWM|
+| 7 | 13 ||
+| 8 | 14 ||
+| 9 | 15 |PWM|
+| 10 | 16 |PWM|
+| 11 | 17 |PWM|
+| 12 | 18 ||
+| 13 | 19 ||
+||20|VCC|
+| AREF | 21 ||
+||22|GND|
+| SDA | 27 ||
+| SCL | 28 ||
+
 ### Build main board
 Main board presents an ATmega328P circuit with arduino bootloader, a power supply circuit, a VU-meter and a 
 ### Build remote control board
